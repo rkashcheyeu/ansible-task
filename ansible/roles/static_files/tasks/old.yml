@@ -1,0 +1,12 @@
+- name: Ensure the Nginx images directory exists
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/images
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
+- name: Download static images
+  ansible.builtin.get_url:
+    url: "https://imgur.com/a/D7WeFYF/zip"
+    dest: /usr/share/nginx/html/images/
+    mode: '0755'

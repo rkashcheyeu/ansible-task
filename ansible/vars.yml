@@ -1,0 +1,13 @@
+users:
+  - name: user1
+    shell: /bin/bash
+    state: present
+    groups: ['sudo']
+    ssh_key: 'ssh-rsa AAAAB3...'
+    password: 'password'
+
+packages:
+  - htop
+  - ncdu
+  - git
+  - nano

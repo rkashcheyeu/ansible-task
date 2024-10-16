@@ -1,0 +1,8 @@
+services:
+  ansible_host:
+    build: .
+    container_name: ansible_host
+    ports:
+      - "22:22"
+      - "80:80"
+    tty: true

@@ -1,0 +1,47 @@
+- name: Ensure the Nginx images directory exists
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/images
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
+- name: Download image 1
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/VFfoCsO.jpeg"
+    dest: /usr/share/nginx/html/images/image1.jpg
+    mode: '0755'
+- name: Download image 2
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/zZD3P2O.jpeg"
+    dest: /usr/share/nginx/html/images/image2.jpg
+    mode: '0755'
+- name: Download image 3
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/pe0mVBF.jpeg"
+    dest: /usr/share/nginx/html/images/image3.jpg
+    mode: '0755'
+- name: Download image 4
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/NLYga3F.jpeg"
+    dest: /usr/share/nginx/html/images/image4.jpg
+    mode: '0755'
+- name: Download image 5
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/onZHFC8.jpeg"
+    dest: /usr/share/nginx/html/images/image5.jpg
+    mode: '0755'
+- name: Download image 6
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/6I5IbOp.jpeg"
+    dest: /usr/share/nginx/html/images/image6.jpg
+    mode: '0755'
+- name: Download image 7
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/8PXuCaN.jpeg"
+    dest: /usr/share/nginx/html/images/image7.jpg
+    mode: '0755'
+- name: Download image 8
+  ansible.builtin.get_url:
+    url: "https://i.imgur.com/RGpbZrV.jpeg"
+    dest: /usr/share/nginx/html/images/image8.jpg
+    mode: '0755'

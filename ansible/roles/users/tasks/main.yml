@@ -1,0 +1,14 @@
+- name: Ensure users are present
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell }}"
+    state: "{{ item.state }}"
+    groups: "{{ item.groups | join(',') }}"
+    password: "{{ item.password | password_hash('sha512') }}"
+  loop: "{{ users }}"
+
+- name: Ensure SSH key is added
+  ansible.builtin.authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ item.ssh_key }}"
+  loop: "{{ users }}"
