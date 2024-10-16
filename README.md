@@ -1,7 +1,4 @@
-cd docker
-
-sudo docker-compose up -d
-
-cd ../ansible
-
-ansible-playbook -i inventory.yml playbook.yml
+1. cd docker
+2. sudo docker-compose up -d
+3. cd ../ansible
+4. ansible-playbook -i inventory.yml playbook.yml
